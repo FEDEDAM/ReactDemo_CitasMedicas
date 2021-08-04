@@ -1,5 +1,24 @@
-body {
+:root
+{
+  --color-primary: #09E5AB;
+  --color-primary-dark:#03654b;
+  --color-bg-primary: #FFF;
+
+
+  --color-secondary: rgb(67, 175, 218);
+  --font-color-text: #000;
+
+  --navbar-height: 100px;
+}
+
+*
+{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +26,37 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+body
+{
+  background-color: var(--color-bg-primary);
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.dnone{
+  display: none;
+}
+
+/*BORRAR AL TERMINAR*/
+
+code 
+{
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1{
+  color:#EEE;
+  font-size:95px;
+}
+
+#root{
+
+  height: calc(100vh - var(--navbar-height));
+  margin-top: var(--navbar-height);
+}
+
+#root > section{
+  height: 100%;
 }
