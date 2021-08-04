@@ -27,7 +27,7 @@ const Signin = () => {
                             className = { email === "" ? "form-control" : "form-control setted-ctrl" }
                             onChange = { ({ target }) => setEmail( target.value ) }
                         />
-                        <label for="email" className = { email === "" ? "form-label" : "form-label setted-lbl" } >Email *</label>
+                        <label className = { email === "" ? "form-label" : "form-label setted-lbl" } >Email *</label>
                     </div>
                     <div className = "form-group">
                         <input id = "user"
@@ -36,7 +36,7 @@ const Signin = () => {
                             className = { userName === "" ? "form-control" : "form-control setted-ctrl" }
                             onChange = { ({ target }) => setUserName( target.value ) }
                         />
-                        <label for="user" className = { userName === "" ? "form-label" : "form-label setted-lbl" } >User *</label>
+                        <label className = { userName === "" ? "form-label" : "form-label setted-lbl" } >User *</label>
                     </div>
                     <div className = "form-group">
                         <input id = "password"
@@ -45,7 +45,7 @@ const Signin = () => {
                             className = { password === "" ? "form-control" : "form-control setted-ctrl" }
                             onChange = { ({ target }) => setPassword( target.value ) }
                         />
-                        <label for="password" className = { password === "" ? "form-label" : "form-label setted-lbl" } >Password *</label>
+                        <label className = { password === "" ? "form-label" : "form-label setted-lbl" } >Password *</label>
                     </div>
                 </form>
 

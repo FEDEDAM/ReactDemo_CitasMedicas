@@ -7,7 +7,7 @@ const ACTIONS = {
     login: 
     {
         action: "LogIn",
-        altMsg: "If you don't have account yet, dont't dude it ",
+        altMsg: "If you don't have account yet, don't dude it ",
         altAct: "SingIn!"
     }
     ,signin: 

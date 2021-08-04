@@ -26,7 +26,7 @@ const LogIn = () => {
                             className = { userName === "" ? "form-control" : "form-control setted-ctrl" }
                             onChange = { ({ target }) => setUserName( target.value ) }
                         />
-                        <label for="user" className = { userName === "" ? "form-label" : "form-label setted-lbl" } >User or email</label>
+                        <label className = { userName === "" ? "form-label" : "form-label setted-lbl" } >User or email</label>
                     </div>
                     <div className = "form-group">
                         <input id = "password"
@@ -35,7 +35,7 @@ const LogIn = () => {
                             className = { password === "" ? "form-control" : "form-control setted-ctrl" }
                             onChange = { ({ target }) => setPassword( target.value ) }
                         />
-                        <label for="Password" className = { password === "" ? "form-label" : "form-label setted-lbl" } >Password</label>
+                        <label className = { password === "" ? "form-label" : "form-label setted-lbl" } >Password</label>
                     </div>
                 </form>
 
