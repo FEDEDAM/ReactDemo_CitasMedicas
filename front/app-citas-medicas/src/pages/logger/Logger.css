@@ -1,0 +1,166 @@
+
+#login
+{ 
+    display:flex;
+    justify-content: center;
+    align-items:center; 
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+}
+
+#login > span{
+    color: var(--font-color-text);
+    font-size: 12px;
+    margin-top: 3em;
+}
+
+#login > span > button{
+    border: none;
+    background-color: var(--color-bg-primary);
+    color: var(--color-primary);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#login > div {
+    display:flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items:center; 
+}
+
+#login div.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    max-width: 600px;
+
+    border: 1px solid #EEE;
+    border-radius:1em;
+    padding: 1.25em;
+}
+
+#login div.container span{
+    padding: 0 1.25em 1.25em 1.25em;
+    text-align: center;
+    font-size: 12px;
+    color: var(--font-color-text)
+}
+
+#login div.container h3
+{
+    color: var(--color-primary);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+#login .form-group
+{
+    margin-bottom: 1.25em;
+    position: relative;
+    height: 50px;
+}
+
+#login .form-group .form-control
+{
+    height: 50px;
+    width: 100%;
+    padding: 21px 12px 6px;
+    border : none;
+    border-bottom: 1px solid #DDD;
+    background-color: var(--color-bg-primary);
+    color: var(--font-color-text)
+}
+
+#login .form-group .form-label {
+    position: absolute;
+    left: 12px;
+    top: -8px;
+    margin-bottom: 0;
+
+    pointer-events: none;  
+    transform: translate3d(0, 22px, 0) scale(1);
+    transform-origin: left top;
+    transition: 240ms;
+        
+    color: #b8b8b8;
+    font-size: 14px;
+    font-weight: 400;
+    z-index: 1;
+}
+
+#login .form-group .form-control:focus
+{
+    outline: none;
+    border : none;
+    border-bottom: 1px solid var(--color-primary);
+}
+
+#login .form-group .form-control:focus ~ .form-label
+{
+    font-size: 12px;
+    top: -20px;
+    color: var(--color-primary);
+}
+
+#login .form-group .setted-lbl
+{
+    font-size: 12px;
+    top: -20px;
+}
+
+#login div button 
+{
+    height: 50px;
+    width: 85%;
+    margin:  1em auto;
+
+    border: none;
+    background: linear-gradient( 45deg, var(--color-primary) , rgb(67, 175, 218) );
+    color: var(--color-bg-primary);
+    
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#login div button:hover 
+{
+    background: linear-gradient( 45deg, rgb(201, 218, 109) , var(--color-primary) );
+}
+
+#login div span.login-rrss-separator
+{
+    margin: 3em 0 1em 0;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+}
+
+#login div div.rsss-container
+{
+    height: 50px;
+    width: 85%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+
+#login div div.rsss-container svg
+{
+    margin: 0 1em;
+    font-size: 2em;
+    color: #CCC;
+    cursor: pointer;
+}
+
+#login div div.rsss-container svg:hover
+{
+    color: var(--color-primary);
+    transform:scale(1.2);
+}
+
