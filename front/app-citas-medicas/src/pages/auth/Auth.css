@@ -115,8 +115,8 @@
 #login div button 
 {
     height: 50px;
-    width: 85%;
-    margin:  1em auto;
+    width: 80%;
+    margin:  1em 10%;
 
     border: none;
     background: linear-gradient( 45deg, var(--color-primary) , rgb(67, 175, 218) );

@@ -1,14 +1,25 @@
-import React , { useState } from 'react'
-import { FaGoogle , FaFacebook , FaGithub } from 'react-icons/fa'
+import React , { useState , useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { FaGoogle , FaFacebook , FaGithub } from 'react-icons/fa';
+import useUser from '../../hooks/useUser'
 
 const LogIn = () => {
     
     const [ userName , setUserName ]  = useState( '' );
     const [ password , setPassword ] = useState( '' );
+    const navigate = useHistory();
+    const { login , isLogged , isLoginLoading , hasLoginErrors } = useUser();
+
+    useEffect(() => {
+        if( isLogged ){
+            console.log( "The user is logged." );
+            navigate.push( "/home" );
+        }
+    } , [ isLogged , navigate ] );
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log({userName  , password});
+        login({ userName , password });
     }
 
     return (
@@ -18,6 +29,9 @@ const LogIn = () => {
                 <span>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quia odio nisi totam.
                 </span>
+
+                { isLoginLoading && <span>Checking credentials...</span>}
+                { !isLoginLoading &&
                 <form onSubmit = { handleSubmit } >
                     <div className = "form-group">
                         <input id = "user"
@@ -37,10 +51,11 @@ const LogIn = () => {
                         />
                         <label className = { password === "" ? "form-label" : "form-label setted-lbl" } >Password</label>
                     </div>
+
+                    <button>LogIn</button>
+                    { hasLoginErrors && <span>Credentials invalid!</span>}
                 </form>
-
-                <button>LogIn</button>
-
+                }
                 <span className = "login-rrss-separator">- You can also login with -</span>
                 <div className="rsss-container">
                     <FaGoogle />

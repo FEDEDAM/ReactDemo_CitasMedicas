@@ -1,14 +1,14 @@
 import React , { useState } from 'react'
 import LogIn from './LogIn'
-import SignIn from './SignIn'
-import './Logger.css'
+import SignUp from './SignUp'
+import './Auth.css'
 
 const ACTIONS = {
     login: 
     {
         action: "LogIn",
         altMsg: "If you don't have account yet, don't dude it ",
-        altAct: "SingIn!"
+        altAct: "SingUp!"
     }
     ,signin: 
     {
@@ -18,7 +18,7 @@ const ACTIONS = {
     }
 }
 
-const Logger = () => {
+const Auth = () => {
 
  
     const [ formAction , setAction ] = useState( ACTIONS.login )
@@ -35,7 +35,7 @@ const Logger = () => {
             {
             formAction.action === 'LogIn' 
                 ? <LogIn /> 
-                : <SignIn />
+                : <SignUp />
             }
 
             <span>
@@ -47,4 +47,4 @@ const Logger = () => {
     )
 }
 
-export default Logger
+export default Auth
