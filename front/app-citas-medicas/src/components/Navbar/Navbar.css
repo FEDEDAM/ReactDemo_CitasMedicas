@@ -24,7 +24,7 @@ header
     padding: 0 20px;
 
     font-weight: 700;
-    font-size: 2em;
+    font-size: 1.7em;
     color: var(--color-primary);
 
     cursor: pointer;
@@ -62,6 +62,11 @@ header
     background: linear-gradient( 45deg, var(--color-primary) , rgb(67, 175, 218) );
     color : var(--color-bg-primary);
     border-radius: 20px;
+}
+
+.active-item
+{
+    text-decoration: underline;
 }
 
 #btn-login
