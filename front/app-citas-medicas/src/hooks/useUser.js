@@ -1,7 +1,7 @@
 import { useCallback , useContext , useState } from 'react'
 import Context from '../contexts/UserContext'
-import loginService from '../services/LoginService'
-import signUpService from '../services/SignUpService'
+import loginService from '../services/Auth/LoginService'
+import signUpService from '../services/Auth/SignUpService'
 
 export default function useUser ()
 {
